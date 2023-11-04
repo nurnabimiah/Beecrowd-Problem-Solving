@@ -3,37 +3,17 @@ import 'package:beecrowd_problem_solving/beecrowd_problem_solving.dart' as beecr
 import 'dart:io';
 
 void main() {
-  int sum = 0;
-  int count = 0;
 
-  while (true) {
-    var input = stdin.readLineSync();
-    // if (input == null) {
-    // print("Invalid input: Please enter a valid age.");
-    //   continue;
-    // }
+  int i;
+  var c;
+  double s =0;
 
-    var age = int.tryParse(input!);
-
-    if (age == null) {
-      // print("Invalid input. Please enter a valid age.");
-      continue;
+  for(i=1;i<=100;i++)
+    {
+      c = 1/i;
+      s = s+c;
     }
-
-    if (age < 0) {
-      break;
-    }
-
-    sum += age;
-    count++;
-  }
-
-  double averageAge = sum / count;
-  print(averageAge.toStringAsFixed(2));
-
-  // if (count == 0) {
-  //    print("No valid ages were entered.");
-  // } else {
-  //
-  // }
+  
+   print('${s.toStringAsFixed(2)}');
+  
 }
