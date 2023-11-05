@@ -1,19 +1,23 @@
+import 'dart:math';
+
 import 'package:beecrowd_problem_solving/beecrowd_problem_solving.dart' as beecrowd_problem_solving;
 
 import 'dart:io';
 
 void main() {
 
-  int i;
+  int i =1;
   var c;
+  int  j =1;
   double s =0;
 
-  for(i=1;i<=100;i++)
-    {
-      c = 1/i;
-      s = s+c;
-    }
-  
+  while(i<=39){
+    c = i/j;
+    s = s + c;
+    i = i+2;
+    j = j*2;
+  }
+
    print('${s.toStringAsFixed(2)}');
   
 }
