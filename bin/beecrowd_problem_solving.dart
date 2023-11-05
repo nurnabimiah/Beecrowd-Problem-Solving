@@ -6,18 +6,15 @@ import 'dart:io';
 
 void main() {
 
-  int i =1;
-  var c;
-  int  j =1;
-  double s =0;
+  int i;
+  String? input   = stdin.readLineSync();
+  int? num = int.tryParse(input!);
 
-  while(i<=39){
-    c = i/j;
-    s = s + c;
-    i = i+2;
-    j = j*2;
-  }
+  for(i=1; i<=num!; i++)
+    {
+       if(num % i == 0){
+         print(i);
+       }
+    }
 
-   print('${s.toStringAsFixed(2)}');
-  
 }
