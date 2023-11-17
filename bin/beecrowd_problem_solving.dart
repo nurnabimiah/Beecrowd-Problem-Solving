@@ -4,18 +4,14 @@ import 'package:beecrowd_problem_solving/beecrowd_problem_solving.dart' as beecr
 
 import 'dart:io';
 
- //14.Write a C program to make such a pattern as a pyramid with an asterisk.
-//
-//    *
-//   * *
-//  * * *
-// * * * *
+// 13. Write a program in C to make a pyramid pattern with numbers increased by 1.
+
 
 
 import 'dart:io';
 
 void main() {
-  int row, column, n;
+  int row, column, n, k=1;
 
   stdout.write('Enter number: ');
   String? input = stdin.readLineSync();
@@ -27,7 +23,7 @@ void main() {
     }
 
     for (column = 1; column <= row; column++) {
-      stdout.write('* ');
+      stdout.write('${k++} ');
     }
 
     stdout.write('\n');
