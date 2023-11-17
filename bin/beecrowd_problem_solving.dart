@@ -4,20 +4,33 @@ import 'package:beecrowd_problem_solving/beecrowd_problem_solving.dart' as beecr
 
 import 'dart:io';
 
-//10. Write a C program to display a pattern like a right angle triangle with a number.
+ //14.Write a C program to make such a pattern as a pyramid with an asterisk.
+//
+//    *
+//   * *
+//  * * *
+// * * * *
+
+
+import 'dart:io';
 
 void main() {
+  int row, column, n;
 
-  int i,j;
-  for(i=1;i<=5;i++)
-    {
-      for(j=1;j<=i;j++)
-        {
-          stdout.write('${j}');
-        }
-        print ('');
+  stdout.write('Enter number: ');
+  String? input = stdin.readLineSync();
+  n = int.tryParse(input!) ?? 0;
+
+  for (row = 1; row <= n; row++) {
+    for (column = 1; column <= n - row; column++) {
+      stdout.write(' ');
     }
 
+    for (column = 1; column <= row; column++) {
+      stdout.write('* ');
+    }
 
-
+    stdout.write('\n');
+  }
 }
+
