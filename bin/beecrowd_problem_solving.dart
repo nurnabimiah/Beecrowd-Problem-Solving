@@ -4,7 +4,7 @@ import 'package:beecrowd_problem_solving/beecrowd_problem_solving.dart' as beecr
 
 import 'dart:io';
 
-//9.Write a program in C to display a pattern like a right angle triangle using an asterisk.
+//10. Write a C program to display a pattern like a right angle triangle with a number.
 
 void main() {
 
@@ -13,7 +13,7 @@ void main() {
     {
       for(j=1;j<=i;j++)
         {
-          stdout.write('*');
+          stdout.write('${j}');
         }
         print ('');
     }
